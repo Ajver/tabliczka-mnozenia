@@ -5,9 +5,7 @@ extends Control
 @onready var b_label = %B_Label
 @onready var answer_line_edit = %AnswerLineEdit
 @onready var check_btn = %CheckBtn
-
-var question_a: int = -1
-var question_b: int = -1
+@onready var question_generator = %QuestionGenerator
 
 
 func _ready() -> void:
@@ -18,11 +16,10 @@ func _ready() -> void:
 
 
 func _generate_next_question() -> void:
-	question_a = randi_range(1, 10)
-	question_b = randi_range(1, 10)
+	var questions: Array[int] = question_generator.generate_next_question()
 	
-	a_label.text = str(question_a)
-	b_label.text = str(question_b)
+	a_label.text = str(questions[0])
+	b_label.text = str(questions[1])
 	
 	answer_line_edit.text = ""
 
@@ -30,19 +27,12 @@ func _generate_next_question() -> void:
 func _check(_v=null) -> void:
 	var answer_text : String = answer_line_edit.text
 	var answer_int : int = answer_text.to_int()
-	var expected = question_a * question_b
+	var is_correct = question_generator.check(answer_int)
 	
-	if answer_int == expected:
-		_correct_answer()
+	if is_correct:
+		# TODO: animation
+		pass
 	else:
-		_wrong_answer()
+		pass
 	
 	_generate_next_question()
-
-
-func _correct_answer() -> void:
-	print("Correct!")
-
-
-func _wrong_answer() -> void:
-	print("Wrong answer")

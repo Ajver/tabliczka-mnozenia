@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dewg6kgfdtkaf"]
+[gd_scene load_steps=7 format=3 uid="uid://dewg6kgfdtkaf"]
 
 [ext_resource type="Script" path="res://src/Multiplying/Multiplying.gd" id="1_g0siy"]
 [ext_resource type="Texture2D" uid="uid://dmxj5a3fcx4gi" path="res://assets/icons/record-button.png" id="3_78nyo"]
 [ext_resource type="Texture2D" uid="uid://bwvr0mnnix15t" path="res://assets/icons/equal.png" id="4_4dp1c"]
 [ext_resource type="PackedScene" uid="uid://ktq7dk11v77m" path="res://src/BackBtn/BackBtn.tscn" id="4_jhtjj"]
+[ext_resource type="PackedScene" uid="uid://cgqw7cyrqtiiy" path="res://src/AnswerPopups/CorrectAnswerPopup/CorrectAnswerPopup.tscn" id="5_t8lru"]
 [ext_resource type="Script" path="res://src/Multiplying/MulQuestionGenerator.gd" id="5_tdant"]
 
 [node name="Multiplying" type="Control"]
@@ -81,6 +82,9 @@ text = "SPRAWDŹ!"
 
 [node name="BackBtn" parent="Panel" instance=ExtResource("4_jhtjj")]
 layout_mode = 0
+
+[node name="CorrectAnswerPopup" parent="." instance=ExtResource("5_t8lru")]
+layout_mode = 1
 
 [node name="MulQuestionGenerator" type="Node" parent="."]
 unique_name_in_owner = true

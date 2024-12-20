@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b68245yenpuv4"]
+[gd_scene load_steps=7 format=3 uid="uid://b68245yenpuv4"]
 
 [ext_resource type="Script" path="res://src/Dividing/Dividing.gd" id="1_pjbom"]
 [ext_resource type="Theme" uid="uid://c5yuw7ps208b" path="res://assets/theme/main_theme.tres" id="2_ar1ay"]
 [ext_resource type="Texture2D" uid="uid://g3ah7qq8kq6" path="res://assets/icons/colon.png" id="3_dr7ny"]
 [ext_resource type="Texture2D" uid="uid://bwvr0mnnix15t" path="res://assets/icons/equal.png" id="4_7coqk"]
 [ext_resource type="Script" path="res://src/Dividing/DivQuestionGenerator.gd" id="5_3lyty"]
+[ext_resource type="PackedScene" uid="uid://ktq7dk11v77m" path="res://src/BackBtn/BackBtn.tscn" id="5_agt1j"]
 
 [node name="Dividing" type="Control"]
 layout_mode = 3
@@ -79,6 +80,11 @@ custom_minimum_size = Vector2(160, 40)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "SPRAWDŹ!"
+
+[node name="BackBtn" parent="Panel" instance=ExtResource("5_agt1j")]
+layout_mode = 0
+offset_right = 119.0
+offset_bottom = 68.0
 
 [node name="DivQuestionGenerator" type="Node" parent="."]
 unique_name_in_owner = true

@@ -11,4 +11,5 @@ Aplikacja do nauki tabliczki mnożenia dla młodszego brata
 <a href="https://www.flaticon.com/free-icons/settings" title="settings icons">Settings icons created by Pixel perfect - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/bar-chart" title="bar chart icons">Bar chart icons created by riajulislam - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/logout" title="logout icons">Logout icons created by Pixel perfect - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/back" title="back icons">Back icons created by Roundicons - Flaticon</a>
 

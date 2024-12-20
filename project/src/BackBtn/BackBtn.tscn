@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://ktq7dk11v77m"]
+
+[ext_resource type="Script" path="res://src/BackBtn/BackBtn.gd" id="1_8fyxj"]
+[ext_resource type="Texture2D" uid="uid://b4pcws0skjaje" path="res://assets/icons/left-arrow.png" id="1_rvvwl"]
+
+[node name="BackBtn" type="MarginContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+script = ExtResource("1_8fyxj")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_rvvwl")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "wróć"
+
+[node name="Button" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+ignore_texture_size = true
+stretch_mode = 5

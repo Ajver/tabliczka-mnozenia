@@ -1,6 +1,5 @@
 extends Control
 
-
 @onready var a_label = %A_Label
 @onready var b_label = %B_Label
 @onready var answer_line_edit = %AnswerLineEdit

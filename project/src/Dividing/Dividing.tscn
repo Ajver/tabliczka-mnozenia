@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b68245yenpuv4"]
+[gd_scene load_steps=9 format=3 uid="uid://b68245yenpuv4"]
 
 [ext_resource type="Script" path="res://src/Dividing/Dividing.gd" id="1_pjbom"]
 [ext_resource type="Theme" uid="uid://c5yuw7ps208b" path="res://assets/theme/main_theme.tres" id="2_ar1ay"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://src/Dividing/DivQuestionGenerator.gd" id="5_3lyty"]
 [ext_resource type="PackedScene" uid="uid://ktq7dk11v77m" path="res://src/BackBtn/BackBtn.tscn" id="5_agt1j"]
 [ext_resource type="PackedScene" uid="uid://cgqw7cyrqtiiy" path="res://src/AnswerPopups/CorrectAnswerPopup/CorrectAnswerPopup.tscn" id="6_2c3b5"]
+[ext_resource type="PackedScene" uid="uid://diw4mtbdis572" path="res://src/AnswerPopups/WrongAnswerPopup/WrongAnswerPopup.tscn" id="7_2psbe"]
 
 [node name="Dividing" type="Control"]
 layout_mode = 3
@@ -89,6 +90,9 @@ offset_right = 119.0
 offset_bottom = 68.0
 
 [node name="CorrectAnswerPopup" parent="." instance=ExtResource("6_2c3b5")]
+layout_mode = 1
+
+[node name="WrongAnswerPopup" parent="." instance=ExtResource("7_2psbe")]
 layout_mode = 1
 
 [node name="DivQuestionGenerator" type="Node" parent="."]

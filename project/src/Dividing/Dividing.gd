@@ -7,6 +7,7 @@ extends Control
 @onready var check_btn = %CheckBtn
 @onready var question_generator = %DivQuestionGenerator
 @onready var correct_answer_popup = $CorrectAnswerPopup
+@onready var wrong_answer_popup = $WrongAnswerPopup
 
 # Used when animatio is playing
 var _ingnore_input: bool = false
@@ -17,6 +18,7 @@ func _ready() -> void:
 	check_btn.pressed.connect(_check)
 	
 	correct_answer_popup.animation_end.connect(_on_animation_end)
+	wrong_answer_popup.animation_end.connect(_on_animation_end)
 	
 	question_generator.generate_correctness_map(10000)
 	
@@ -44,10 +46,11 @@ func _check(_v=null) -> void:
 		_ingnore_input = true
 		correct_answer_popup.play()
 	else:
-		pass
-	
-	_generate_next_question()
+		var current_answer = question_generator.get_current_question_answer()
+		wrong_answer_popup.play(current_answer[0], current_answer[1], current_answer[2], "div")
 
 
 func _on_animation_end() -> void:
 	_ingnore_input = false
+
+	_generate_next_question()

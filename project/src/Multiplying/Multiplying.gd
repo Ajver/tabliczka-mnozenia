@@ -6,6 +6,7 @@ extends Control
 @onready var check_btn = %CheckBtn
 @onready var question_generator = %MulQuestionGenerator
 @onready var correct_answer_popup = $CorrectAnswerPopup
+@onready var wrong_answer_popup = $WrongAnswerPopup
 
 # Used when animation is playing
 var _ignore_input: bool = false
@@ -16,6 +17,7 @@ func _ready() -> void:
 	check_btn.pressed.connect(_check)
 	
 	correct_answer_popup.animation_end.connect(_on_animation_ended)
+	wrong_answer_popup.animation_end.connect(_on_animation_ended)
 	
 	question_generator.generate_correctness_map(10000)
 	
@@ -39,15 +41,16 @@ func _check(_v=null) -> void:
 	var answer_int : int = answer_text.to_int()
 	var is_correct = question_generator.check(answer_int)
 	
+	_ignore_input = true
+	
 	if is_correct:
-		_ignore_input = true
 		correct_answer_popup.play()
 	else:
-		pass
-	
-	_generate_next_question()
+		var current_answer = question_generator.get_current_question_answer()
+		wrong_answer_popup.play(current_answer[0], current_answer[1], current_answer[2], "multiply")
 
 
 func _on_animation_ended() -> void:
-	print("END")
 	_ignore_input = false
+	
+	_generate_next_question()

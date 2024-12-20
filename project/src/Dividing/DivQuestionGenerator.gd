@@ -34,6 +34,10 @@ func generate_next_question() -> Array[int]:
 	return [_question_a, _question_b]
 
 
+func get_current_question_answer() -> Array[int]:
+	return [_question_a, _question_b, _question_a / _question_b]
+
+
 func _should_regenerate(key: String) -> bool:
 	var current = int(DivideMemory.get_setting(key))
 	

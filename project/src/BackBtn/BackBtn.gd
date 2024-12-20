@@ -26,7 +26,7 @@ func _on_btn_hover_end() -> void:
 
 
 func _on_btn_down() -> void:
-	pass
+	AudioPlayer.play("click")
 
 
 func _back_to_main_menu() -> void:

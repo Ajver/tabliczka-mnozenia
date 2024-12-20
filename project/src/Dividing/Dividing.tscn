@@ -1,19 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://dewg6kgfdtkaf"]
+[gd_scene load_steps=6 format=3 uid="uid://b68245yenpuv4"]
 
-[ext_resource type="Script" path="res://src/Multiplying/Multiplying.gd" id="1_g0siy"]
-[ext_resource type="Theme" uid="uid://c5yuw7ps208b" path="res://assets/theme/main_theme.tres" id="2_bsukr"]
-[ext_resource type="Texture2D" uid="uid://cbi3na088pr84" path="res://assets/icons/multiply.png" id="3_rk0v6"]
-[ext_resource type="Texture2D" uid="uid://bwvr0mnnix15t" path="res://assets/icons/equal.png" id="4_4dp1c"]
-[ext_resource type="Script" path="res://src/Multiplying/MulQuestionGenerator.gd" id="5_tdant"]
+[ext_resource type="Script" path="res://src/Dividing/Dividing.gd" id="1_pjbom"]
+[ext_resource type="Theme" uid="uid://c5yuw7ps208b" path="res://assets/theme/main_theme.tres" id="2_ar1ay"]
+[ext_resource type="Texture2D" uid="uid://g3ah7qq8kq6" path="res://assets/icons/colon.png" id="3_dr7ny"]
+[ext_resource type="Texture2D" uid="uid://bwvr0mnnix15t" path="res://assets/icons/equal.png" id="4_7coqk"]
+[ext_resource type="Script" path="res://src/Dividing/DivQuestionGenerator.gd" id="5_3lyty"]
 
-[node name="Multiplying" type="Control"]
+[node name="Dividing" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_g0siy")
+script = ExtResource("1_pjbom")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -22,7 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_bsukr")
+theme = ExtResource("2_ar1ay")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 layout_mode = 1
@@ -50,11 +50,12 @@ layout_mode = 2
 text = "-1"
 
 [node name="MultSign" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(14, 0)
+custom_minimum_size = Vector2(16, 20)
 layout_mode = 2
-texture = ExtResource("3_rk0v6")
+size_flags_vertical = 4
+texture = ExtResource("3_dr7ny")
 expand_mode = 1
-stretch_mode = 5
+stretch_mode = 6
 
 [node name="B_Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
@@ -64,7 +65,7 @@ text = "-1"
 [node name="EqSign" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(14, 0)
 layout_mode = 2
-texture = ExtResource("4_4dp1c")
+texture = ExtResource("4_7coqk")
 expand_mode = 1
 stretch_mode = 5
 
@@ -79,6 +80,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "SPRAWDŹ!"
 
-[node name="MulQuestionGenerator" type="Node" parent="."]
+[node name="DivQuestionGenerator" type="Node" parent="."]
 unique_name_in_owner = true
-script = ExtResource("5_tdant")
+script = ExtResource("5_3lyty")

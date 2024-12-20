@@ -5,7 +5,7 @@ extends Control
 @onready var b_label = %B_Label
 @onready var answer_line_edit = %AnswerLineEdit
 @onready var check_btn = %CheckBtn
-@onready var question_generator = %MulQuestionGenerator
+@onready var question_generator = %DivQuestionGenerator
 
 
 func _ready() -> void:

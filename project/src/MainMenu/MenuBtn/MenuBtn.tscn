@@ -17,6 +17,8 @@ corner_radius_bottom_left = 15
 
 [node name="MenuBtn" type="MarginContainer"]
 script = ExtResource("1_5rctv")
+default_color = Color(1, 1, 1, 1)
+accent_color = Color(0.945098, 0.560784, 0.00392157, 1)
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 2
@@ -33,7 +35,8 @@ theme_override_constants/margin_bottom = 15
 layout_mode = 2
 theme_override_constants/separation = 5
 
-[node name="TextureButton" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -44,6 +47,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(140, 0)
 layout_mode = 2
 size_flags_horizontal = 4

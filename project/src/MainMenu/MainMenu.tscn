@@ -54,7 +54,7 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="TextureButton" parent="Panel/ButtonsContainer/DivideBtn/MarginContainer/VBoxContainer" index="0"]
+[node name="TextureRect" parent="Panel/ButtonsContainer/DivideBtn/MarginContainer/VBoxContainer" index="0"]
 texture = ExtResource("3_r45t1")
 
 [node name="Label" parent="Panel/ButtonsContainer/DivideBtn/MarginContainer/VBoxContainer" index="1"]
@@ -64,7 +64,7 @@ text = "dzielenie"
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="TextureButton" parent="Panel/ButtonsContainer/StatsBtn/MarginContainer/VBoxContainer" index="0"]
+[node name="TextureRect" parent="Panel/ButtonsContainer/StatsBtn/MarginContainer/VBoxContainer" index="0"]
 texture = ExtResource("4_f3uqj")
 
 [node name="Label" parent="Panel/ButtonsContainer/StatsBtn/MarginContainer/VBoxContainer" index="1"]
@@ -74,7 +74,7 @@ text = "wyniki"
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="TextureButton" parent="Panel/ButtonsContainer/OptionsBtn/MarginContainer/VBoxContainer" index="0"]
+[node name="TextureRect" parent="Panel/ButtonsContainer/OptionsBtn/MarginContainer/VBoxContainer" index="0"]
 texture = ExtResource("5_5x3fs")
 
 [node name="Label" parent="Panel/ButtonsContainer/OptionsBtn/MarginContainer/VBoxContainer" index="1"]

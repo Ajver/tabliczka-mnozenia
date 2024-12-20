@@ -42,7 +42,7 @@ horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 15
+theme_override_constants/separation = 10
 alignment = 1
 
 [node name="A_Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer"]
@@ -51,7 +51,7 @@ layout_mode = 2
 text = "-1"
 
 [node name="MultSign" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(16, 20)
+custom_minimum_size = Vector2(16, 24)
 layout_mode = 2
 size_flags_vertical = 4
 texture = ExtResource("3_dr7ny")
@@ -79,6 +79,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(160, 40)
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
 text = "SPRAWDŹ!"
 
 [node name="BackBtn" parent="Panel" instance=ExtResource("5_agt1j")]

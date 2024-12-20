@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/Multiplying/Multiplying.gd" id="1_g0siy"]
 [ext_resource type="Theme" uid="uid://c5yuw7ps208b" path="res://assets/theme/main_theme.tres" id="2_bsukr"]
-[ext_resource type="Texture2D" uid="uid://cbi3na088pr84" path="res://assets/icons/multiply.png" id="3_rk0v6"]
+[ext_resource type="Texture2D" uid="uid://dmxj5a3fcx4gi" path="res://assets/icons/record-button.png" id="3_78nyo"]
 [ext_resource type="Texture2D" uid="uid://bwvr0mnnix15t" path="res://assets/icons/equal.png" id="4_4dp1c"]
 [ext_resource type="Script" path="res://src/Multiplying/MulQuestionGenerator.gd" id="5_tdant"]
 
@@ -50,9 +50,9 @@ layout_mode = 2
 text = "-1"
 
 [node name="MultSign" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(14, 0)
+custom_minimum_size = Vector2(12, 0)
 layout_mode = 2
-texture = ExtResource("3_rk0v6")
+texture = ExtResource("3_78nyo")
 expand_mode = 1
 stretch_mode = 5
 

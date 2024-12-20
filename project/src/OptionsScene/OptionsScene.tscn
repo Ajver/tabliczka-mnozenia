@@ -1,0 +1,108 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3unn0r65lsxy"]
+
+[ext_resource type="PackedScene" uid="uid://ktq7dk11v77m" path="res://src/BackBtn/BackBtn.tscn" id="1_66ayn"]
+[ext_resource type="Script" path="res://src/OptionsScene/OptionsScene.gd" id="1_eqrdv"]
+
+[node name="OptionsScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eqrdv")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+text = "zakres przy mnożeniu:"
+horizontal_alignment = 2
+
+[node name="MultiplyRangeEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "10"
+placeholder_text = "10"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+text = "zakres przy dzieleniu:"
+horizontal_alignment = 2
+
+[node name="DivideRangeEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "10"
+placeholder_text = "10"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+text = "rozmiar interfejsu:"
+horizontal_alignment = 2
+
+[node name="UIScaleOption" type="OptionButton" parent="Panel/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+selected = 1
+item_count = 4
+popup/item_0/text = "50%"
+popup/item_1/text = "100%"
+popup/item_1/id = 1
+popup/item_2/text = "200%"
+popup/item_2/id = 2
+popup/item_3/text = "300%"
+popup/item_3/id = 3
+
+[node name="BackBtn" parent="Panel" instance=ExtResource("1_66ayn")]
+layout_mode = 0
+
+[node name="Header" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+
+[node name="Label" type="Label" parent="Panel/Header"]
+layout_mode = 2
+text = "Opcje"

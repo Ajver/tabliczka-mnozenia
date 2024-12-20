@@ -22,10 +22,6 @@ MultiplyMemory="*res://src/Settings/MultiplyMemory.gd"
 DivideMemory="*res://src/Settings/DivideMemory.gd"
 AudioPlayer="*res://src/AudioPlayer/AudioPlayer.gd"
 
-[display]
-
-window/stretch/scale=2.0
-
 [gui]
 
 theme/custom="res://assets/theme/main_theme.tres"

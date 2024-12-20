@@ -9,8 +9,8 @@ func __default_settings__() -> Dictionary:
 		# ... Automatically generated
 	}
 	
-	for a in range(1, 11):
-		for b in range(1, 11):
+	for a in range(1, 21):
+		for b in range(1, 21):
 			default_settings[str(a*b, "/", b)] = 0
 	
 	return default_settings

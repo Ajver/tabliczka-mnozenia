@@ -3,9 +3,13 @@ extends Node
 var _question_a: int = -1
 var _question_b: int = -1
 
-var max_value: int = 3
+var max_value: int = -1
 
 var _previous_key = ""
+
+
+func _ready() -> void:
+	max_value = AppSettings.get_setting("divide_max_value")
 
 
 func generate_next_question() -> Array[int]:

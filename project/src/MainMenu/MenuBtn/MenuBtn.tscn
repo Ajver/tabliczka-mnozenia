@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdng4kdravix1"]
+
+[ext_resource type="Script" path="res://src/MainMenu/MenuBtn/MenuBtn.gd" id="1_5rctv"]
+[ext_resource type="Texture2D" uid="uid://cbi3na088pr84" path="res://assets/icons/multiply.png" id="1_44jp8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nexra"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="MenuBtn" type="MarginContainer"]
+script = ExtResource("1_5rctv")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nexra")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="TextureButton" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture = ExtResource("1_44jp8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "mnożenie"
+horizontal_alignment = 1
+
+[node name="Button" type="TextureButton" parent="."]
+layout_mode = 2
+mouse_default_cursor_shape = 2

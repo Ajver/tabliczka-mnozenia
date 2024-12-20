@@ -7,6 +7,7 @@ signal pressed
 
 @onready var texture_rect: TextureRect = %TextureRect
 @onready var label: Label = %Label
+@onready var panel: Panel = %Panel
 
 
 func _ready() -> void:
@@ -20,11 +21,13 @@ func _ready() -> void:
 func _on_btn_hover_over() -> void:
 	label.modulate = accent_color
 	texture_rect.modulate = accent_color
+	panel.modulate = accent_color
 
 
 func _on_btn_hover_end() -> void:
 	label.modulate = default_color
 	texture_rect.modulate = default_color
+	panel.modulate = default_color
 
 
 func _on_btn_down() -> void:

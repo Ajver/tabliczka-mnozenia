@@ -12,6 +12,8 @@ func _ready() -> void:
 	answer_line_edit.text_submitted.connect(_check)
 	check_btn.pressed.connect(_check)
 	
+	question_generator.generate_correctness_map(10000)
+	
 	_generate_next_question()
 
 

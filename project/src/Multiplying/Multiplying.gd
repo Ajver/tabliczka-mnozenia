@@ -38,6 +38,11 @@ func _check(_v=null) -> void:
 		return
 	
 	var answer_text : String = answer_line_edit.text
+	
+	if answer_text.strip_edges() == "":
+		# No text input
+		return
+	
 	var answer_int : int = answer_text.to_int()
 	var is_correct = question_generator.check(answer_int)
 	

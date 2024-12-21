@@ -1,0 +1,181 @@
+[gd_scene load_steps=6 format=3 uid="uid://cbercrvjpfka"]
+
+[ext_resource type="Script" path="res://src/StatsScreen/StatsScreen.gd" id="1_heki1"]
+[ext_resource type="PackedScene" uid="uid://ktq7dk11v77m" path="res://src/BackBtn/BackBtn.tscn" id="2_nb27b"]
+[ext_resource type="PackedScene" uid="uid://denpdtebpjbt" path="res://src/StatsScreen/AnswerProgressBar/AnswerProgressBarLeft.tscn" id="2_tsvl2"]
+[ext_resource type="PackedScene" uid="uid://cqecqj0tw1jig" path="res://src/Header/Header.tscn" id="3_5lteb"]
+[ext_resource type="PackedScene" uid="uid://c65xabymn4jt" path="res://src/StatsScreen/AnswerProgressBar/AnswerProgressBarRight.tscn" id="3_7cl0f"]
+
+[node name="StatsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_heki1")
+AnswerProgressBarLeft = ExtResource("2_tsvl2")
+AnswerProgressBarRight = ExtResource("3_7cl0f")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Panel/MarginContainer/ScrollContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 60
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.945098, 0.560784, 0.00392157, 1)
+theme_override_font_sizes/font_size = 22
+text = "Dzisiaj"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer/VBoxContainer/HBoxContainer2/HBoxContainer"]
+layout_mode = 2
+text = "Poprawnych mnożeń: "
+
+[node name="TodayCorrectMultipliesLabel" type="Label" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer/VBoxContainer/HBoxContainer2/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.760784, 0.301961, 1)
+text = "123"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer/VBoxContainer/HBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+text = "Poprawnych dzieleń: "
+
+[node name="TodayCorrectDividesLabel" type="Label" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer/VBoxContainer/HBoxContainer2/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.760784, 0.301961, 1)
+text = "321"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.945098, 0.560784, 0.00392157, 1)
+theme_override_font_sizes/font_size = 22
+text = "Wszystkich"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer2"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer2/VBoxContainer/HBoxContainer2/HBoxContainer"]
+layout_mode = 2
+text = "Poprawnych mnożeń: "
+
+[node name="TotalCorrectMultipliesLabel" type="Label" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer2/VBoxContainer/HBoxContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.760784, 0.301961, 1)
+text = "1234"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer2/VBoxContainer/HBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+text = "Poprawnych dzieleń: "
+
+[node name="TotalCorrectDividesLabel" type="Label" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer2/VBoxContainer/HBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.760784, 0.301961, 1)
+text = "3210"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.945098, 0.560784, 0.00392157, 1)
+theme_override_font_sizes/font_size = 24
+text = "Najwięcej poprawnych odpowiedzi..."
+horizontal_alignment = 1
+
+[node name="HSplitContainer" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer3"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="MultipliesTierList" type="VBoxContainer" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer3/HSplitContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DividesTierList" type="VBoxContainer" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer3/HSplitContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Header" parent="Panel" instance=ExtResource("3_5lteb")]
+layout_mode = 1
+
+[node name="Label" parent="Panel/Header/Header" index="0"]
+text = "Wyniki"
+
+[node name="BackBtn" parent="Panel" instance=ExtResource("2_nb27b")]
+layout_mode = 0
+
+[editable path="Panel/Header"]

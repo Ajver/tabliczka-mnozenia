@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cqecqj0tw1jig"]
+
+[node name="Header" type="Control"]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+size_flags_vertical = 0
+
+[node name="Header" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -97.0
+offset_bottom = 57.0
+grow_horizontal = 0
+size_flags_horizontal = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+
+[node name="Label" type="Label" parent="Header"]
+layout_mode = 2
+text = "Opcje"
+horizontal_alignment = 2

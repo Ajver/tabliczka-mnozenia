@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dfta2ryiw0dqn"]
+[gd_scene load_steps=10 format=3 uid="uid://dfta2ryiw0dqn"]
 
 [ext_resource type="Script" path="res://src/MainMenu/MainMenu.gd" id="1_56rka"]
 [ext_resource type="PackedScene" uid="uid://bdng4kdravix1" path="res://src/MainMenu/MenuBtn/MenuBtn.tscn" id="2_7dmal"]
@@ -6,7 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dqn4vkbyxnb7f" path="res://assets/icons/divide.png" id="3_r45t1"]
 [ext_resource type="PackedScene" uid="uid://b68245yenpuv4" path="res://src/Dividing/Dividing.tscn" id="3_tf3kp"]
 [ext_resource type="Texture2D" uid="uid://d274lc272g8sr" path="res://assets/icons/chart.png" id="4_f3uqj"]
-[ext_resource type="PackedScene" uid="uid://d3unn0r65lsxy" path="res://src/OptionsScene/OptionsScene.tscn" id="4_uwfnt"]
+[ext_resource type="PackedScene" uid="uid://d3unn0r65lsxy" path="res://src/OptionsScene/OptionsScreen.tscn" id="4_uwfnt"]
+[ext_resource type="PackedScene" uid="uid://cbercrvjpfka" path="res://src/StatsScreen/StatsScreen.tscn" id="4_xvebg"]
 [ext_resource type="Texture2D" uid="uid://dqkqlwhe3yfr8" path="res://assets/icons/settings.png" id="5_5x3fs"]
 
 [node name="MainMenu" type="Control"]
@@ -21,6 +22,7 @@ size_flags_vertical = 3
 script = ExtResource("1_56rka")
 multiplying_scene = ExtResource("2_b7jxy")
 dividing_scene = ExtResource("3_tf3kp")
+stats_scene = ExtResource("4_xvebg")
 options_scene = ExtResource("4_uwfnt")
 
 [node name="Panel" type="Panel" parent="."]

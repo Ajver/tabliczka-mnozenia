@@ -21,7 +21,7 @@ func generate_next_question() -> Array[int]:
 		var div_result = randi_range(1, max_value)
 		_question_a = div_result * _question_b
 		
-		key = str(_question_a, "/", _question_b)
+		key = str(_question_a, ":", _question_b)
 		
 		if regenerate:
 			# that's the regenerate. Let's not re-generate again
@@ -67,7 +67,7 @@ func check(answer: int) -> bool:
 
 
 func _correct_answer() -> void:
-	var key = str(_question_a, "/", _question_b)
+	var key = str(_question_a, ":", _question_b)
 	var current = DivideMemory.get_setting(key)
 	current += 1
 	DivideMemory.set_setting(key, current)
@@ -76,7 +76,7 @@ func _correct_answer() -> void:
 
 
 func _wrong_answer() -> void:
-	var key = str(_question_a, "/", _question_b)
+	var key = str(_question_a, ":", _question_b)
 	var current = DivideMemory.get_setting(key)
 	current = max(current -1, 0)
 	DivideMemory.set_setting(key, current)
@@ -88,7 +88,7 @@ func generate_correctness_map(total: int) -> Dictionary:
 	var map = {}
 	for i in range(total):
 		var questions: Array[int] = generate_next_question()
-		var key = str(questions[0], "/", questions[1])
+		var key = str(questions[0], ":", questions[1])
 		
 		if not map.has(key):
 			map[key] = 0

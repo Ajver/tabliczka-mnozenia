@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3unn0r65lsxy"]
+[gd_scene load_steps=4 format=3 uid="uid://d3unn0r65lsxy"]
 
 [ext_resource type="PackedScene" uid="uid://ktq7dk11v77m" path="res://src/BackBtn/BackBtn.tscn" id="1_66ayn"]
-[ext_resource type="Script" path="res://src/OptionsScene/OptionsScene.gd" id="1_eqrdv"]
+[ext_resource type="Script" path="res://src/OptionsScene/OptionsScreen.gd" id="1_eqrdv"]
+[ext_resource type="PackedScene" uid="uid://cqecqj0tw1jig" path="res://src/Header/Header.tscn" id="3_lqs8y"]
 
-[node name="OptionsScene" type="Control"]
+[node name="OptionsScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -90,20 +91,8 @@ popup/item_2/id = 2
 popup/item_3/text = "300%"
 popup/item_3/id = 3
 
+[node name="Header" parent="Panel" instance=ExtResource("3_lqs8y")]
+layout_mode = 1
+
 [node name="BackBtn" parent="Panel" instance=ExtResource("1_66ayn")]
 layout_mode = 0
-
-[node name="Header" type="MarginContainer" parent="Panel"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 40.0
-grow_horizontal = 0
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-
-[node name="Label" type="Label" parent="Panel/Header"]
-layout_mode = 2
-text = "Opcje"

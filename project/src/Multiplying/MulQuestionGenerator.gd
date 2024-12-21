@@ -71,7 +71,8 @@ func _correct_answer() -> void:
 	current += 1
 	MultiplyMemory.set_setting(key, current)
 	
-	print("Correct! (%d)" % current)
+	current = TodayCorrectAnswers.get_setting("correct_multiplies")
+	TodayCorrectAnswers.set_setting("correct_multiplies", current + 1)
 
 
 func _wrong_answer() -> void:

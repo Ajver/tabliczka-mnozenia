@@ -128,6 +128,7 @@ layout_mode = 2
 text = "Poprawnych mnożeń: "
 
 [node name="TotalCorrectMultipliesLabel" type="Label" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer2/VBoxContainer/HBoxContainer2/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.6, 0.760784, 0.301961, 1)
 text = "1234"
@@ -141,6 +142,7 @@ layout_mode = 2
 text = "Poprawnych dzieleń: "
 
 [node name="TotalCorrectDividesLabel" type="Label" parent="Panel/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer3/VBoxContainer2/VBoxContainer/HBoxContainer2/HBoxContainer2"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.6, 0.760784, 0.301961, 1)
 text = "3210"

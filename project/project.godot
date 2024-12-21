@@ -21,6 +21,7 @@ AppSettings="*res://src/Settings/AppSettings.gd"
 MultiplyMemory="*res://src/Settings/MultiplyMemory.gd"
 DivideMemory="*res://src/Settings/DivideMemory.gd"
 AudioPlayer="*res://src/AudioPlayer/AudioPlayer.gd"
+TodayCorrectAnswers="*res://src/Settings/TodayCorrectAnswers.gd"
 
 [gui]
 

@@ -72,7 +72,8 @@ func _correct_answer() -> void:
 	current += 1
 	DivideMemory.set_setting(key, current)
 	
-	print("Correct! (%d)" % current)
+	current = TodayCorrectAnswers.get_setting("correct_divides")
+	TodayCorrectAnswers.set_setting("correct_divides", current + 1)
 
 
 func _wrong_answer() -> void:
